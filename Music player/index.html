@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Madness</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="/images/logo23.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Melody Madness</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="songs.html" class="nav-link"><i class="fas fa-music"></i> Songs</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs...">
+                </div>
+               <a href="login.html"> <button class="login-btn"> <i class="fas fa-sign-in-alt"></i> Login</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <i class="fas fa-music hero-icon"></i>
+                <h1>Discover Your <span class="text-gradient">Perfect Beat</span></h1>
+                <p>Stream thousands of tracks from emerging artists and timeless classics.
+                    Your next favorite song is just a click away.</p>
+                <div class="hero-buttons">
+                    <button class="btn primary-btn"><i class="fas fa-play"></i> Start Listening</button>
+                    <button class="btn outline-btn">Explore Trending</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-chart-line"></i>
+                <h2>Trending Now</h2>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Melody Madness</h3>
+                    <p>Your ultimate destination for discovering and enjoying music.
+                        Stream, share, and connect through the power of sound.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="songs.html">Songs</a></li>
+                        <li><a href="#">Playlists</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> contact@melodymadness.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Music Avenue, Sound City, BLR 560065</li>
+                        <li class="dev-btn-container">
+                            <button id="developer-btn" class="dev-btn">
+                                <i class="fas fa-code"></i> Developer
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Melody Madness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Developer Modal -->
+    <div id="developer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-code"></i>
+                <h2>Developer Information</h2>
+                <p class="modal-subtitle">The mind behind Melody Madness</p>
+            </div>
+            <div class="dev-info">
+                <div class="dev-profile">
+                    <div class="dev-avatar">FS</div>
+                    <div>
+                        <h3>Franklin Supreeth</h3>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </div>
+                <p class="dev-bio">
+                    Passionate about creating immersive web experiences with a focus on design and user experience.
+                    Specialized in HTML, CSS, JavaScript, and modern web technologies.
+                </p>
+                <div class="dev-skills">
+                    <h4>Skills</h4>
+                    <div class="skills-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>UI/UX</span>
+                        <span>Web Design</span>
+                    </div>
+                </div>
+                <div class="dev-connect">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/FranklinSupreeth"><i class="fab fa-github"></i></a>
+                        <a href="linkedin.com/in/franklin-supreeth-230683294"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:dev@melodymadness.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

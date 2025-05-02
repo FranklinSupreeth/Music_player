@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Melody Madness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        :root {
+            --melody-purple: #8b5cf6;
+            --melody-blue: #3b82f6;
+            --melody-dark: #1f1f1f;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--melody-purple);
+            text-decoration: none;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--melody-purple), var(--melody-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        input,
+        button {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            margin-top: 0.5rem;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+        }
+
+        .btn {
+            background: linear-gradient(to right, var(--melody-purple), var(--melody-blue));
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .social-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: 1px solid #444;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        dialog {
+            background: #222;
+            border: none;
+            border-radius: 1rem;
+            padding: 2rem;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .divider {
+            text-align: center;
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background: #333;
+            top: 50%;
+            width: 45%;
+        }
+
+        .divider::before {
+            left: 0;
+        }
+
+        .divider::after {
+            right: 0;
+        }
+
+        .divider span {
+            background: #121212;
+            padding: 0 1rem;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        label {
+            font-size: 0,9rem;
+            margin-top: 1rem;
+            display: flex ;
+        }
+
+        .checkbox-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header style="border-bottom: 1px solid #333; padding: 1rem;">
+        <a href="/" class="text-2xl font-bold text-gradient">Melody Madness</a>
+    </header>
+
+    <!-- Login Card -->
+    <main style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 2rem;">
+        <div class="glass-card" style="width: 100%; max-width: 400px;">
+            <h1 class="text-3xl font-bold text-gradient" style="text-align: center;">Welcome Back</h1>
+            <p style="text-align: center; color: #bbb;">Sign in to continue your musical journey</p>
+
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required />
+
+                <div class="checkbox-row">
+                    <label><input type="checkbox" id="rememberMe" /> Remember me</label>
+                    <button type="button" onclick="document.getElementById('forgotDialog').showModal()"
+                        style="background: none; color: var(--melody-purple); border: none;">Forgot password?</button>
+                </div>
+
+                <button class="btn" type="submit" style="margin-top: 1rem;">Sign in</button>
+            </form>
+
+            <div class="divider"><span>Or continue with</span></div>
+
+            <div class="socials">
+                <button class="social-btn"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-btn"><i class="fab fa-twitter"></i></button>
+                <button class="social-btn"><i class="fab fa-linkedin-in"></i></button>
+            </div>
+
+            <p style="text-align: center; margin-top: 1.5rem; color: #bbb;">
+                Don't have an account?
+                <a href="/register.html">Sign up</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Forgot Password Dialog -->
+    <dialog id="forgotDialog">
+        <h3 style="font-size: 1.25rem; font-weight: bold;">Forgot your password?</h3>
+        <p style="color: #aaa;">Enter your email address and we'll send you a link to reset your password.</p>
+        <form id="resetForm">
+            <label for="resetEmail">Email</label>
+            <input type="email" id="resetEmail" required />
+            <button type="submit" class="btn" style="margin-top: 1rem;">Send reset link</button>
+        </form>
+        <button onclick="document.getElementById('forgotDialog').close()"
+            style="margin-top: 1rem; background: none; border: none; color: #bbb;">Close</button>
+    </dialog>
+
+    <!-- Script -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("rememberMe").checked;
+            console.log({ email, password, rememberMe });
+        });
+
+        document.getElementById("resetForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("resetEmail").value;
+            console.log("Password reset requested for:", email);
+            document.getElementById("forgotDialog").close();
+        });
+
+        // Autofill reset email from login form
+        document.getElementById('forgotDialog').addEventListener('show', () => {
+            document.getElementById('resetEmail').value = document.getElementById('email').value;
+        });
+    </script>
+
+</body>
+
+</html>
