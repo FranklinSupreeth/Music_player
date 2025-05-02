@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs - Melody Madness</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon for tab and taskbar -->
+    <link rel="icon" type="image/png" href="/images/logo23.png">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Melody Madness</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="songs.html" class="nav-link active"><i class="fas fa-music"></i> Songs</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs...">
+                </div>
+                <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-chart-line"></i>
+                <h2>Trending Now</h2>
+            </div>
+            <div class="music-grid trending-grid">
+                <!-- Trending Song 1 -->
+                <div class="music-card" data-id="t1">
+                    <div class="music-card-img">
+                        <img src="/images/snap.jpg" alt="Midnight Echoes" height="400" width="400">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Snap</h3>
+                                <p>Rosa Lin</p>
+                            </div>
+                            <button class="like-btn" data-id="t1">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                
+                        <!-- Hidden audio element -->
+                        <audio id="audio-t1" preload="auto" loop>
+                            <source src="/audio/Rosa Linn - SNAP (Lyrics).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <!-- Custom controls -->
+                        <div class="custom-controls" data-id="t1">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Trending Song 2 -->
+                <div class="music-card" data-id="t2">
+                    <div class="music-card-img">
+                        <img src="/images/run it up.png" alt="Midnight Echoes" height="400" width="400">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Run It Up</h3>
+                                <p>Hanumankind</p>
+                            </div>
+                            <button class="like-btn" data-id="t2">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                
+                        <!-- Hidden audio element -->
+                        <audio id="audio-t2" preload="auto" loop>
+                            <source src="/audio/Hanumankind - Run It Up ( Prod. By Kalmi ) _ (Official Music Video).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <!-- Custom controls -->
+                        <div class="custom-controls" data-id="t2">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Song 3 -->
+                <div class="music-card" data-id="t3">
+                    <div class="music-card-img">
+                        <img src="/images/heeat waves.png" alt="Midnight Echoes" height="400" width="400">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Heat Wave</h3>
+                                <p>Animals </p>
+                            </div>
+                            <button class="like-btn" data-id="t3">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                
+                        <!-- Hidden audio element -->
+                        <audio id="audio-t3" preload="auto" loop>
+                            <source src="/audio/Glass Animals - Heat Waves (Lyrics).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <!-- Custom controls -->
+                        <div class="custom-controls" data-id="t3">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Song 4 -->
+                <div class="music-card" data-id="t4">
+                    <div class="music-card-img">
+                        <img src="/images/wannabeyours.png" alt="Midnight Echoes" height="400" width="400">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>I Wanna be Yours</h3>
+                                <p>Arctic Monkeys</p>
+                            </div>
+                            <button class="like-btn" data-id="t4">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                
+                        <!-- Hidden audio element -->
+                        <audio id="audio-t4" preload="auto" loop>
+                            <source src="/audio/I Wanna Be Yours.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                
+                        <!-- Custom controls -->
+                        <div class="custom-controls" data-id="t4">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Songs Section -->
+    <section class="songs-section">
+        <div class="container">
+            <div class="section-header">
+                <i class="fas fa-music"></i>
+                <h2>All Songs</h2>
+            </div>
+            <div class="songs-grid">
+                <!-- Song cards will be generated by JavaScript -->
+                <!-- Song Card: s1 -->
+                <div class="music-card" data-id="s1">
+                    <div class="music-card-img">
+                        <img src="/images/lovely.png"
+                            alt="Cosmic Journey">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Lovely</h3>
+                                <p>Billie Eilish</p>
+                            </div>
+                            <button class="like-btn" data-id="s1"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <audio id="audio-s1" preload="auto" loop>
+                            <source src="/audio/Billie Eilish, Khalid - lovely-yt.savetube.me.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="custom-controls" data-id="s1">
+                            <button class="play-btn" data-id="s1"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song Card: s2 -->
+                <div class="music-card" data-id="s2">
+                    <div class="music-card-img">
+                        <img src="/images/mock.png"
+                            alt="Urban Dreams">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Mockingbird</h3>
+                                <p>Eminem/p>
+                            </div>
+                            <button class="like-btn" data-id="s2"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <audio id="audio-s2" preload="auto" loop>
+                            <source src="/audio/Eminem - Mockingbird (Lyrics)-yt.savetube.me.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="custom-controls" data-id="s2">
+                            <button class="play-btn" data-id="s2"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song Card: s3 -->
+                <div class="music-card" data-id="s3">
+                    <div class="music-card-img">
+                        <img src="/images/enemy.png"
+                            alt="Twilight Echoes">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>My Enemy</h3>
+                                <p>Imagine Dragons</p>
+                            </div>
+                            <button class="like-btn" data-id="s3"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <audio id="audio-s3" preload="auto" loop>
+                            <source src="/audio/Imagine Dragons x JID - Enemy (Lyrics)-yt.savetube.me.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="custom-controls" data-id="s3">
+                            <button class="play-btn" data-id="s3"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song Card: s4 -->
+                <div class="music-card" data-id="s4">
+                    <div class="music-card-img">
+                        <img src="/images/7yeras.png"
+                            alt="Rainy Day">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>7 years</h3>
+                                <p>Lukas Graham</p>
+                            </div>
+                            <button class="like-btn" data-id="s4"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <audio id="audio-s4" preload="auto" loop>
+                            <source src="/audio/Lukas Graham - 7 Years (Lyrics)-yt.savetube.me.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="custom-controls" data-id="s4">
+                            <button class="play-btn" data-id="s4"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Song Card: s5 -->
+                <div class="music-card" data-id="s5">
+                    <div class="music-card-img">
+                        <img src="/images/summertime.png"
+                            alt="Desert Mirage">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div class="music-card-content">
+                        <div class="music-card-header">
+                            <div class="music-info">
+                                <h3>Summertime</h3>
+                                <p>Lana Del Rey</p>
+                            </div>
+                            <button class="like-btn" data-id="s5"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <audio id="audio-s5" preload="auto" loop>
+                            <source src="/audio/Lana Del Rey - Summertime Sadness (Lyrics)-yt.savetube.me.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="custom-controls" data-id="s5">
+                            <button class="play-btn" data-id="s5"><i class="fas fa-play"></i></button>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Melody Madness</h3>
+                    <p>Your ultimate destination for discovering and enjoying music.
+                        Stream, share, and connect through the power of sound.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="songs.html">Songs</a></li>
+                        <li><a href="#">Playlists</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> contact@melodymadness.com</li>
+                        <li><i class="fas fa-phone"></i> 9102056789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Music Avenue, Sound City, BLR 560065</li>
+                        <li class="dev-btn-container">
+                            <button id="developer-btn" class="dev-btn">
+                                <i class="fas fa-code"></i> Developer
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Melody Madness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Developer Modal -->
+    <div id="developer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-code"></i>
+                <h2>Developer Information</h2>
+                <p class="modal-subtitle">The mind behind Melody Madness</p>
+            </div>
+            <div class="dev-info">
+                <div class="dev-profile">
+                    <div class="dev-avatar">FS</div>
+                    <div>
+                        <h3>Franklin Supreeth</h3>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </div>
+                <p class="dev-bio">
+                    Passionate about creating immersive web experiences with a focus on design and user experience.
+                    Specialized in HTML, CSS, JavaScript, and modern web technologies.
+                </p>
+                <div class="dev-skills">
+                    <h4>Skills</h4>
+                    <div class="skills-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>UI/UX</span>
+                        <span>Web Design</span>
+                        <span>Editor</span>
+                    </div>
+                </div>
+                <div class="dev-connect">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/FranklinSupreeth"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:dev@melodymadness.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const customControls = document.querySelectorAll('.custom-controls');
+
+            customControls.forEach(control => {
+                const id = control.dataset.id;
+                const audio = document.querySelector(`#audio-${id}`);
+                const playBtn = control.querySelector('.play-btn');
+                const volumeSlider = control.querySelector('.volume-slider');
+
+                playBtn.addEventListener('click', function () {
+                    if (audio.paused) {
+                        audio.play();
+                        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    } else {
+                        audio.pause();
+                        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    }
+                });
+
+                volumeSlider.addEventListener('input', function () {
+                    audio.volume = this.value;
+                });
+            });
+        });
+    </script>
+ 
+    <script src="script.js"></script>
+</body>
+
+</html>
